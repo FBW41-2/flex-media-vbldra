@@ -5,11 +5,9 @@ body {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
 }
 .flex{
-    height: 200px;
+    height: 100px;
     flex-grow: 1;
 }
 .flex-box1 {
@@ -34,22 +32,23 @@ body {
     background-color: red;
 }
 
-@media (min-width: 601px) and (max-width:800px) {
-    .flex-container {
-        flex-direction: row;
+@media screen and (max-width: 600px) {
+    .flex {
+        flex-basis: 100%;
     }
+} 
+
+@media screen and (min-width: 601px) and (max-width:800px) {
     .flex-box1, .flex-box2, .flex-box6, .flex-box7{
         flex-basis: 100%;
+        flex-grow: 1;
     }
     .flex-box3, .flex-box4, .flex-box5 {
         flex-grow: 2;
     }
 } 
 
-@media (min-width: 801px) {
-    .flex-container {
-        flex-direction: row;
-    }
+@media screen and (min-width: 801px) {
     .flex-box1, .flex-box2 {
         flex-basis: 50%;
         flex-grow: 2;
